@@ -1,0 +1,13 @@
+<div *ngFor="let car of cars" class="card" style="width: 18rem">
+  <img src="{{ apiUrl }}{{ car.imagePath }}" class="card-img-top" alt="..." />
+  <div  class="card-body">
+    <h5 class="card-title">
+      <b>{{ car.brandName | uppercase }} {{ car.carName }}</b>
+    </h5>
+    <p class="card-text"><b>Model Year:</b>{{ car.modelYear }}</p>
+    <p class="card-text"><b>Color:</b>{{ car.colorName }}</p>
+    <p class="card-text"><b>Description:</b>{{ car.description }}</p>
+    <p class="card-text"><b>Daily Price:</b>{{ car.dailyPrice | currency }}</p>
+    <a class="btn btn-primary">Details</a>
+  </div>
+</div>
